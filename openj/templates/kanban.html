@@ -16,13 +16,13 @@
                 <b><a href="{{ url_for('kanban.update', id=card.id) }}">ID {{ card.id }}</a></b>
             </div>
             <p>{{ card.description }}</p>
-            <small>
+            <div class="card-timestamp">
                 {% if card.updated_at %}
-                    Updated on {{ card.updated_at.strftime('%Y-%m-%d') }}
+                    {{ card.updated_at.strftime('%m/%d/%Y') }}
                 {% else %}
-                    Created on {{ card.created_at.strftime('%Y-%m-%d') }}
+                    {{ card.created_at.strftime('%m/%d/%Y') }}
                 {% endif %}
-            </small>
+            </div>
         </div>
         {% endfor %}
     </div>

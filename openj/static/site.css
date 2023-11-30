@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap');
 
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  src: url(material-symbols-outlined.woff) format('woff');
+}
+
 :root {
     --color-background-card: #FFFFFF;
     --color-background-lane: #EEF0F2;
@@ -96,6 +102,18 @@ a, a:visited {
 .card-section {
     border-bottom: 2px solid var(--color-background-lane);
     padding: 0em 0 0.5em 0;
+}
+
+.card-timestamp {
+    color: var(--color-text-header);
+    font-size: 0.8em;
+    white-space: nowrap;
+}
+
+.card-timestamp:before {
+    font-family: 'Material Symbols Outlined';
+    vertical-align: bottom;
+    content: "\E889";
 }
 
 .flash {
