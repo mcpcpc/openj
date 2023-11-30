@@ -3,7 +3,7 @@
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
-  src: url(material-symbols-outlined.woff) format('woff');
+  src: url(material-symbols-outlined.woff2) format('woff');
 }
 
 :root {
