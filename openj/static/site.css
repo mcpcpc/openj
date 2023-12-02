@@ -34,6 +34,10 @@ header {
 }
 
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
     background-color: var(--color-background-body);
     color: var(--color-text); 
 }
@@ -75,13 +79,6 @@ a, a:visited {
     cursor: pointer;
 }
 
-.board {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: calc(100vh - 56px);
-}
-
 .lane {
     flex: 1;
     background-color: var(--color-background-lane);
@@ -90,7 +87,7 @@ a, a:visited {
     max-width: 300px;
 }
 
-.card {
+.card, .form {
     align-self: center;
     background-color: var(--color-background-card);
     border-radius: 0.2em;

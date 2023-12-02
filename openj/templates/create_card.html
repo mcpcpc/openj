@@ -4,23 +4,21 @@
 <h1>Add New Card</h1>
 {% endblock %}
 {% block main %}
-<section>
-    <form method="post">
-        <fieldset>
-            <legend>Card Details</legend>
-            <label for="lane_id">Lane</label><br>
-            <select name="lane_id" required>
-                {% for lane in lanes %}
-                <option value={{ lane.id }}>{{ lane.title }}</option>
-                {% endfor %}
-            </select><br>
-            <label for="title">Title</label><br>
-            <input name="title" type="text" required><br>
-            <label for="description">Description</label><br>
-            <textarea name="description" rows=5 required></textarea>
-        </fieldset>
-        <a href="{{ url_for('kanban.index') }}">Cancel</a>
+<form class="form" method="post">
+    <fieldset>
+        <legend>Card Details</legend>
+        <label for="lane_id">Lane</label><br>
+        <select name="lane_id" required>
+            {% for lane in lanes %}
+            <option value={{ lane.id }}>{{ lane.title }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="title">Title</label><br>
+        <input name="title" type="text" required><br>
+        <label for="description">Description</label><br>
+        <textarea name="description" rows=5 required></textarea>
+    </fieldset>
+    <a href="{{ url_for('kanban.index') }}">Cancel</a>
     <input type="submit" value="Create">
-    </form>
-</section>
+</form>
 {% endblock %}
