@@ -5,7 +5,8 @@
 {% endblock %}
 {% block main %}
 <form class="form" method="post">
-    <p>To delete this card, click <a href="{{ url_for('kanban.delete', id=card.id) }}">here</a></p>
+    <h2>Update Card</h2>
+    <p>Click <a href="{{ url_for('kanban.delete', id=card.id) }}">here</a> to delete.</p>
     <label for="lane_id">Lane</label>
     <select name="lane_id" required>
         {% for lane in lanes %}
