@@ -11,7 +11,7 @@ from openj.api.card import card
 from openj.kanban import kanban
 from openj.db import init_app
 
-__version__ = "0.0.1"
+__version__ = "0.1.0"
 
 
 def create_app(test_config=None):

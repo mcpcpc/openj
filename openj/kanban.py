@@ -19,10 +19,11 @@ kanban = Blueprint("kanban", __name__)
 
 @kanban.route("/kanban")
 def index():
+    interval = request.args.get("interval")
     lanes = get_db().execute("SELECT * FROM lane").fetchall()
     cards = get_db().execute("SELECT * FROM card").fetchall()
     groups = {l["title"]: [c for c in cards if c["lane_id"] == l["id"]] for l in lanes}
-    return render_template("kanban.html", groups=groups)
+    return render_template("kanban.html", interval=interval, groups=groups)
 
 
 @kanban.route("/kanban/create", methods=("GET", "POST"))
