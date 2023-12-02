@@ -12,8 +12,9 @@
     --color-background-body: #F5F7F8;
     --color-background-button: rgb(14, 106, 237);
     --color-border: rgb(202, 216, 223);
-    --color-text-title: #2B455C;
+    --color-text-title: #2B455C; 
     --color-text-header: #486276;
+    --color-text-label: rgb(34, 68, 95);
     --color-text: #0D0D0D;
     --color-text-highlight: #4E92F4;
     --color-text-button: #FFFFFF;
@@ -77,6 +78,24 @@ a, a:visited {
     border-color: var(--color-background-button);
     border-radius: 0.2em;
     cursor: pointer;
+}
+
+.form input, .form select, .form textarea {
+    padding: 0.5em;
+    align-items: flex-start;
+    align-self: stretch;
+    border-radius: 3px;
+    display: flex;
+    margin: 0;
+    border: 1px solid rgb(132, 149, 163);
+}
+
+.form label {
+    font-size: 0.8em;
+    font-weight: 600;
+    align-items: flex-start;
+    display: flex;
+    color: var(--color-text-label);
 }
 
 .lane {
