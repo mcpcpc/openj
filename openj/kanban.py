@@ -34,7 +34,7 @@ def create():
             return redirect(url_for("kanban.index"))
         flash(response[0], "error")
     lanes = get_db().execute("SELECT * FROM lane").fetchall()
-    return render_template("card_create.html", lanes=lanes)
+    return render_template("create_card.html", lanes=lanes)
 
 
 @kanban.route("/kanban/update/<int:id>", methods=("GET", "POST"))
@@ -46,7 +46,7 @@ def update(id: int):
         flash(response[0], "error")
     card = read_card(id)[0]
     lanes = get_db().execute("SELECT * FROM lane").fetchall()
-    return render_template("card_update.html", lanes=lanes, card=card)
+    return render_template("update_card.html", lanes=lanes, card=card)
 
 
 @kanban.get("/kanban/delete/<int:id>")
