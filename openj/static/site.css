@@ -81,12 +81,12 @@ a, a:visited {
 }
 
 .form input, .form select, .form textarea {
-    padding: 0.5em;
+    padding: 1em;
     align-items: flex-start;
     align-self: stretch;
     border-radius: 3px;
     display: flex;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     border: 1px solid rgb(132, 149, 163);
 }
 
