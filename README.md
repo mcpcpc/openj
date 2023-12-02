@@ -40,7 +40,8 @@ pip install -e .
 
 ### Flask
 
-Non-production WSGI via waitress for debugging.
+Non-production WSGI via waitress for development and
+debugging.
 
 ```shell
 flask --app openj run --debug
