@@ -38,6 +38,14 @@ pip install -e .
 
 ## Deployment
 
+### Flask
+
+Non-production WSGI via waitress for debugging.
+
+```shell
+flask --app openj run --debug
+```
+
 ### Waitress
 
 Production WSGI via waitress.
