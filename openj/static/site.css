@@ -3,7 +3,9 @@
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
-  src: url(material-symbols-outlined.woff2) format('woff');
+  font-weight: 400;
+  src: url(material-symbols-outlined.woff2) format('woff2'),
+       url(material-symbols-outlined.ttf) format('truetype');
 }
 
 :root {
@@ -63,7 +65,7 @@ h2, h3 {
     margin: 0;
 }
 
-a, a:visited {
+a, a:visited, a:hover, a:active {
     color: var(--color-text-highlight);
     text-decoration: none;
 }
