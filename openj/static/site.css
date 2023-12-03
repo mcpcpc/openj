@@ -117,9 +117,14 @@ a, a:visited, a:hover, a:active {
 }
 
 .form input[type="submit"], .form input[type="reset"] {
+    font-size: 1em;
     padding: 0.5em;
     border-radius: 0.2em;
     border: 1px solid rgb(132, 149, 163);
+}
+
+.form .navigation {
+    padding: 0.5em;
 }
 
 .lane {
