@@ -83,7 +83,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .form input[type="text"], .form select, .form textarea {
-    font-size: 1.1em;
     box-sizing: content-box;
     width: 300px;
     padding: 0.5em;
@@ -91,8 +90,7 @@ a, a:visited, a:hover, a:active {
     align-items: flex-start;
     align-self: stretch;
     border-radius: 3px;
-    margin-bottom: 1em;
-    /* margin-bottom: 0.5em; */
+    margin-bottom: 0.5em;
     border: 1px solid rgb(132, 149, 163);
 }
 
