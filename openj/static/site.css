@@ -83,6 +83,15 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
 }
 
+.form {
+    align-self: center;
+    background-color: var(--color-background-card);
+    border-radius: 0.2em;
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px, rgba(0, 0, 0, 0.05) 0 10px 15px -5px, rgba(0, 0, 0, 0.05) 0 7px 7px -5px;
+}
+
 .form input[type="text"], .form select, .form textarea {
     font-size: 1.2em;
     color: var(--color-text-input);
@@ -93,7 +102,7 @@ a, a:visited, a:hover, a:active {
     align-items: flex-start;
     align-self: stretch;
     flex-direction: column;
-    border-radius: 3px;
+    border-radius: 0.2em;
     margin-bottom: 0.5em;
     border: 1px solid rgb(132, 149, 163);
 }
@@ -109,7 +118,7 @@ a, a:visited, a:hover, a:active {
 
 .form input[type="submit"], .form input[type="reset"] {
     padding: 0.5em;
-    border-radius: 3px;
+    border-radius: 0.2em;
     border: 1px solid rgb(132, 149, 163);
 }
 
@@ -121,7 +130,7 @@ a, a:visited, a:hover, a:active {
     max-width: 300px;
 }
 
-.card, .form {
+.card {
     align-self: center;
     background-color: var(--color-background-card);
     border-radius: 0.2em;
