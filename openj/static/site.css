@@ -16,6 +16,7 @@
     --color-border: rgb(202, 216, 223);
     --color-text-title: #2B455C; 
     --color-text-header: #486276;
+    --color-text-input: rgb(71, 97, 117);
     --color-text-label: rgb(34, 68, 95);
     --color-text: #0D0D0D;
     --color-text-highlight: #4E92F4;
@@ -84,7 +85,7 @@ a, a:visited, a:hover, a:active {
 
 .form input[type="text"], .form select, .form textarea {
     font-size: 1.2em;
-    color: rgb(71, 97, 117);
+    color: var(--color-text-input);
     box-sizing: content-box;
     width: 300px;
     padding: 0.5em;
