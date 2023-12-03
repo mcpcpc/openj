@@ -82,14 +82,20 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
 }
 
-.form input, .form select, .form textarea {
+.form input[type="text"], .form select, .form textarea {
     padding: 0.5em;
     align-items: flex-start;
     align-self: stretch;
     border-radius: 3px;
-    display: flex;
+    /*display: flex;*/
     margin-bottom: 0.5em;
     border: 1px solid rgb(132, 149, 163);
+}
+
+.form input[type="submit"] {
+    padding: 0.5em;
+    align-self: flex-end;
+    border-radius: 3px;
 }
 
 .form label {
