@@ -83,7 +83,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .form input, .form select, .form textarea {
-    width: 300px;
     padding: 0.5em;
     align-items: flex-start;
     align-self: stretch;
