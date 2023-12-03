@@ -84,6 +84,7 @@ a, a:visited, a:hover, a:active {
 
 .form input[type="text"], .form select, .form textarea {
     font-size: 1.2em;
+    line-height: 1.8em;
     color: rgb(71, 97, 117);
     box-sizing: content-box;
     width: 300px;
@@ -91,6 +92,7 @@ a, a:visited, a:hover, a:active {
     display: flex;
     align-items: flex-start;
     align-self: stretch;
+    flex-direction: column;
     border-radius: 3px;
     margin-bottom: 0.5em;
     border: 1px solid rgb(132, 149, 163);
