@@ -83,7 +83,7 @@ a, a:visited, a:hover, a:active {
 }
 
 .form input[type="text"], .form select, .form textarea {
-    font-size: 1.2em;
+    font-size: 1.1em;
     box-sizing: content-box;
     width: 300px;
     padding: 0.5em;
