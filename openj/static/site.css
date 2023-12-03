@@ -87,15 +87,13 @@ a, a:visited, a:hover, a:active {
     align-items: flex-start;
     align-self: stretch;
     border-radius: 3px;
-    display: flex;
     margin-bottom: 0.5em;
     border: 1px solid rgb(132, 149, 163);
 }
 
 .form input[type="submit"] {
     padding: 0.5em;
-    display: flex;
-    align-self: flex-end;
+    align-self: flex-start;
     border-radius: 3px;
 }
 
