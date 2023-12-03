@@ -6,7 +6,6 @@
 {% block main %}
 <form class="form" method="post">
     <h2>Update Card</h2>
-    <p>Click <a href="{{ url_for('kanban.delete', id=card.id) }}">here</a> to delete.</p>
     <label for="lane_id">Lane</label>
     <select name="lane_id" required>
         {% for lane in lanes %}
@@ -17,6 +16,7 @@
     <input name="title" type="text" value="{{ card.title }}" required>
     <label for="description">Description</label>
     <textarea name="description" rows=5 required>{{ card.description }}</textarea>
+    <a href="{{ url_for('kanban.delete', id=card.id) }}">here</a>
     <input type="submit" value="Update">
 </form>
 {% endblock %}

@@ -82,7 +82,8 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
 }
 
-.form input, .form select, .form textarea {
+.form input[type="text"], .form select, .form textarea {
+    width: 300px;
     padding: 0.5em;
     display: flex;
     align-items: flex-start;
