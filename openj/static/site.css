@@ -84,7 +84,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .form {
-    /*align-self: center;*/
     display: flex;
     flex-direction: column;
     background-color: var(--color-background-card);
@@ -125,12 +124,6 @@ a, a:visited, a:hover, a:active {
     padding: 0.5em;
     border-radius: 0.2em;
     border: 1px solid rgb(132, 149, 163);
-}
-
-.form .navigation {
-    align-self: end;
-    display: flex;
-    padding: 0.5em;
 }
 
 .lane {

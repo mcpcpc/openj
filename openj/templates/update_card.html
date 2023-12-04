@@ -16,8 +16,6 @@
     <input name="title" type="text" value="{{ card.title }}" required>
     <label for="description">Description</label>
     <textarea name="description" rows=5 required>{{ card.description }}</textarea>
-    <a class="navigation" href="{{ url_for('kanban.index') }}">back</a>
-    <a class="navigation" href="{{ url_for('kanban.delete', id=card.id) }}">delete</a>
     <input type="submit" value="update">
 </form>
 {% endblock %}
