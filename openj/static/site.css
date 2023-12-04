@@ -3,7 +3,9 @@
 @font-face {
   font-family: 'Material Symbols Outlined';
   font-style: normal;
-  src: url(material-symbols-outlined.woff2) format('woff');
+  font-weight: 400;
+  src: url(material-symbols-outlined.woff2) format('woff2'),
+       url(material-symbols-outlined.ttf) format('truetype');
 }
 
 :root {
@@ -12,8 +14,10 @@
     --color-background-body: #F5F7F8;
     --color-background-button: rgb(14, 106, 237);
     --color-border: rgb(202, 216, 223);
-    --color-text-title: #2B455C;
+    --color-text-title: #2B455C; 
     --color-text-header: #486276;
+    --color-text-input: rgb(71, 97, 117);
+    --color-text-label: rgb(34, 68, 95);
     --color-text: #0D0D0D;
     --color-text-highlight: #4E92F4;
     --color-text-button: #FFFFFF;
@@ -34,6 +38,10 @@ header {
 }
 
 main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 56px);
     background-color: var(--color-background-body);
     color: var(--color-text); 
 }
@@ -58,7 +66,7 @@ h2, h3 {
     margin: 0;
 }
 
-a, a:visited {
+a, a:visited, a:hover, a:active {
     color: var(--color-text-highlight);
     text-decoration: none;
 }
@@ -75,11 +83,50 @@ a, a:visited {
     cursor: pointer;
 }
 
-.board {
+form {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: calc(100vh - 56px);
+    flex-direction: column;
+    align-self: center;
+    background-color: var(--color-background-card);
+    border-radius: 0.2em;
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px, rgba(0, 0, 0, 0.05) 0 10px 15px -5px, rgba(0, 0, 0, 0.05) 0 7px 7px -5px;
+}
+
+input[type="text"], select, textarea {
+    font-size: 1.2em;
+    color: var(--color-text-input);
+    box-sizing: content-box;
+    width: 300px;
+    padding: 0.5em;
+    display: flex;
+    align-items: flex-start;
+    align-self: stretch;
+    flex-direction: column;
+    border-radius: 0.2em;
+    margin-bottom: 0.5em;
+    border: 1px solid rgb(132, 149, 163);
+}
+
+label {
+    font-size: 1em;
+    font-weight: 600;
+    align-items: flex-start;
+    display: flex;
+    color: var(--color-text-label);
+    margin-bottom: 0.3em;
+}
+
+input[type="submit"] {
+    align-self: end;
+    display: flex;
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 0.2em;
+    border: 1px solid var(--color-background-button);
+    background-color: var(--color-background-button);
+    color: var(--color-text-button);
 }
 
 .lane {

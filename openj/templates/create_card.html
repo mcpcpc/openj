@@ -1,0 +1,21 @@
+{% extends 'base.htm' %}
+{% block title %}Add New Card{% endblock %}
+{% block header %}
+<h1>Kanban Board</h1>
+{% endblock %}
+{% block main %}
+<form method="post">
+    <h2>Create Card</h2>
+    <label for="lane_id">Lane</label>
+    <select name="lane_id" required>
+        {% for lane in lanes %}
+        <option value={{ lane.id }}>{{ lane.title }}</option>
+        {% endfor %}
+    </select>
+    <label for="title">Title</label> 
+    <input name="title" type="text" required>
+    <label for="description">Description</label>
+    <textarea name="description" rows=5 required></textarea>
+    <input type="submit" value="create">
+</form>
+{% endblock %}

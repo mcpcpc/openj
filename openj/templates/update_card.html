@@ -1,0 +1,21 @@
+{% extends 'base.htm' %}
+{% block title %}Modify Existing Card{% endblock %}
+{% block header %}
+<h1>Kanban Board</h1>
+{% endblock %}
+{% block main %}
+<form method="post">
+    <h2>Update Card</h2>
+    <label for="lane_id">Lane</label>
+    <select name="lane_id" required>
+        {% for lane in lanes %}
+        <option value={{ lane.id }} {% if card.lane_id == lane.id %}selected{% endif %}>{{ lane.title }}</option>
+        {% endfor %}
+    </select>
+    <label for="title">Title</label>
+    <input name="title" type="text" value="{{ card.title }}" required>
+    <label for="description">Description</label>
+    <textarea name="description" rows=5 required>{{ card.description }}</textarea>
+    <input type="submit" value="update">
+</form>
+{% endblock %}
