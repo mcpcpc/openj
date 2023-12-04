@@ -10,16 +10,16 @@
     <h2>{{ lane }} &mdash; {{ cards|length }}</h2>
     {% for card in cards %}
     <div class="card">
-        <div class="card-section">
+        <div class="card-header">
             <h3>{{ card.title }}</h3>
             <b><a href="{{ url_for('kanban.update', id=card.id) }}">ID {{ card.id }}</a></b>
         </div>
         <p>{{ card.description }}</p>
-        <div class="card-timestamp">
+        <div class="card-detail">
             {% if card.updated_at %}
-                {{ card.updated_at.strftime('%m/%d/%Y') }}
+                <span class="material-symbols-outlined">update</span> <{{ card.updated_at.strftime('%m/%d/%Y') }}
             {% else %}
-                {{ card.created_at.strftime('%m/%d/%Y') }}
+                <span class="material-symbols-outlined">update</span> {{ card.created_at.strftime('%m/%d/%Y') }}
             {% endif %}
         </div>
     </div>
