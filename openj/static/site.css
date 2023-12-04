@@ -116,7 +116,9 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 0.3em;
 }
 
-.form input[type="submit"], .form input[type="reset"] {
+.form input[type="submit"] {
+    align-self: end;
+    display: flex;
     font-size: 1em;
     padding: 0.5em;
     border-radius: 0.2em;
