@@ -84,7 +84,9 @@ a, a:visited, a:hover, a:active {
 }
 
 .form {
-    align-self: center;
+    /*align-self: center;*/
+    display: flex;
+    flex-direction: column;
     background-color: var(--color-background-card);
     border-radius: 0.2em;
     padding: 1em;
