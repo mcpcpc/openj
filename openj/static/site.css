@@ -84,7 +84,6 @@ a, a:visited, a:hover, a:active {
 }
 
 .form {
-    display: flex;
     align-self: center;
     background-color: var(--color-background-card);
     border-radius: 0.2em;
