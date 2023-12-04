@@ -126,6 +126,8 @@ a, a:visited, a:hover, a:active {
 }
 
 .form .navigation {
+    align-self: end;
+    display: flex;
     padding: 0.5em;
 }
 
