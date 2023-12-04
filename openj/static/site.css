@@ -83,7 +83,7 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
 }
 
-.form {
+form {
     display: flex;
     flex-direction: column;
     background-color: var(--color-background-card);
@@ -93,7 +93,7 @@ a, a:visited, a:hover, a:active {
     box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px, rgba(0, 0, 0, 0.05) 0 10px 15px -5px, rgba(0, 0, 0, 0.05) 0 7px 7px -5px;
 }
 
-.form input[type="text"], .form select, .form textarea {
+input[type="text"], select, textarea {
     font-size: 1.2em;
     color: var(--color-text-input);
     box-sizing: content-box;
@@ -108,7 +108,7 @@ a, a:visited, a:hover, a:active {
     border: 1px solid rgb(132, 149, 163);
 }
 
-.form label {
+label {
     font-size: 1em;
     font-weight: 600;
     align-items: flex-start;
@@ -117,7 +117,7 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 0.3em;
 }
 
-.form input[type="submit"] {
+input[type="submit"] {
     align-self: end;
     display: flex;
     font-size: 1em;
