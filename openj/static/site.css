@@ -153,6 +153,7 @@ input[type="submit"] {
 
 .card-detail {
     color: var(--color-text-header);
+    vertical-align: bottom;
     font-size: 0.8em;
     white-space: nowrap;
 }
