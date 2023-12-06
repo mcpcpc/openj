@@ -28,6 +28,7 @@ def index():
     cards = get_db().execute(
         """
         SELECT
+            card.id AS id,
             card.created_at AS created_at,
             card.updated_at AS updated_at,
             card.title AS title,
