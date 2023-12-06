@@ -6,6 +6,12 @@
 {% block main %}
 <form method="post">
     <h2>Create Card</h2>
+    <label for="user_id">Owner</label>
+    <select name="user_id" required>
+        {% for user in users %}
+        <option value={{ user.id }}>{{ user.title }}</option>
+        {% endfor %}
+    </select>
     <label for="lane_id">Lane</label>
     <select name="lane_id" required>
         {% for lane in lanes %}
