@@ -14,14 +14,13 @@
             <h3>{{ card.title }}</h3>
             <b><a href="{{ url_for('kanban.update', id=card.id) }}">ID {{ card.id }}</a></b>
         </div>
-        <p>{{ card.description }}</p>
         <div class="card-detail">
             {% if card.updated_at %}
                 <span class="material-symbols">update</span> {{ card.updated_at.strftime('%m/%d/%Y') }}
             {% else %}
                 <span class="material-symbols">update</span> {{ card.created_at.strftime('%m/%d/%Y') }}
             {% endif %}
-        </div>
+        </div> 
     </div>
     {% endfor %}
 </div>
