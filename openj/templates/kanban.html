@@ -16,10 +16,13 @@
         </div>
         <div class="card-detail">
             {% if card.updated_at %}
-                <span class="material-symbols">update</span> {{ card.updated_at.strftime('%m/%d/%Y') }}
+            <span class="material-symbols">update</span> {{ card.updated_at.strftime('%m/%d/%Y') }}
             {% else %}
-                <span class="material-symbols">update</span> {{ card.created_at.strftime('%m/%d/%Y') }}
+            <span class="material-symbols">update</span> {{ card.created_at.strftime('%m/%d/%Y') }}
             {% endif %}
+        </div>
+        <div class="card-detail">
+            <span class="material-symbols">person</span> {{ card.firstname[0] }}. {{ card.lastname }}
         </div>
     </div>
     {% endfor %}
