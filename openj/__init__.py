@@ -6,12 +6,13 @@ from os import makedirs
 
 from flask import Flask
 
+from openj.api.user import user
 from openj.api.lane import lane
 from openj.api.card import card
 from openj.kanban import kanban
 from openj.db import init_app
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 
 def create_app(test_config=None):
@@ -41,6 +42,7 @@ def create_app(test_config=None):
     except OSError:
         pass
     init_app(app)
+    app.register_blueprint(user)
     app.register_blueprint(lane)
     app.register_blueprint(card)
     app.register_blueprint(kanban)

@@ -2,7 +2,7 @@
 {% block title %}Kanban Board{% endblock %}
 {% block header %}
 <h1>Kanban Board</h1>
-<a class="button" href="{{ url_for('kanban.create') }}">&#65291; Add Card</a>
+<a class="button" href="{{ url_for('kanban.create_card') }}">&#65291; Add Card</a>
 {% endblock %}
 {% block main %}
 {% for lane, cards in groups.items() %}
@@ -10,17 +10,19 @@
     <h2>{{ lane }} &mdash; {{ cards|length }}</h2>
     {% for card in cards %}
     <div class="card">
-        <div class="card-section">
+        <div class="card-header">
             <h3>{{ card.title }}</h3>
-            <b><a href="{{ url_for('kanban.update', id=card.id) }}">ID {{ card.id }}</a></b>
+            <b><a href="{{ url_for('kanban.update_card', id=card.id) }}">ID {{ card.id }}</a></b>
         </div>
-        <p>{{ card.description }}</p>
-        <div class="card-timestamp">
+        <div class="card-detail">
             {% if card.updated_at %}
-                {{ card.updated_at.strftime('%m/%d/%Y') }}
+            <span class="material-symbols">update</span> {{ card.updated_at.strftime('%m/%d/%Y') }}
             {% else %}
-                {{ card.created_at.strftime('%m/%d/%Y') }}
+            <span class="material-symbols">update</span> {{ card.created_at.strftime('%m/%d/%Y') }}
             {% endif %}
+        </div>
+        <div class="card-detail">
+            <span class="material-symbols">person</span> {{ card.firstname[0] }}. {{ card.lastname }}
         </div>
     </div>
     {% endfor %}

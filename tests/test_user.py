@@ -10,7 +10,7 @@ from unittest import TestCase
 from openj import create_app
 
 
-class CardTestCase(TestCase):
+class UserTestCase(TestCase):
     @classmethod
     def setUpClass(cls):
         cls._resources = Path(__file__).parent
@@ -32,50 +32,46 @@ class CardTestCase(TestCase):
     def tearDown(self):
         self.ctx.pop()
 
-    def test_create_card(self):
+    def test_create_user(self):
         db = connect(self.db)
         db.executescript(self._preload)
         response = self.client.post(
-            "/api/card",
+            "/api/user",
             data={
-                "title": "title two",
-                "description": "description two",
-                "lane_id": 1,
-                "user_id": 1,
+                "firstname": "firstname_two",
+                "lastname": "lastname_two",
             },
         )
         self.assertEqual(response.status_code, 201)
 
-    def test_read_card(self):
+    def test_read_user(self):
         db = connect(self.db)
         db.executescript(self._preload)
-        response = self.client.get("/api/card/1")
+        response = self.client.get("/api/user/1")
         self.assertEqual(response.status_code, 200)
 
-    def test_update_card(self):
+    def test_update_user(self):
         db = connect(self.db)
         db.executescript(self._preload)
         response = self.client.put(
-            "/api/card/1",
+            "/api/user/1",
             data={
-                "title": "title two_",
-                "description": "description two_",
-                "lane_id": 2,
-                "user_id": 1,
+                "firstname": "firstname_one_",
+                "lastname": "lastname_one_",
             },
         )
         self.assertEqual(response.status_code, 201)
 
-    def test_delete_card(self):
+    def test_delete_user(self):
         db = connect(self.db)
         db.executescript(self._preload)
-        response = self.client.delete("/api/card/1")
+        response = self.client.delete("/api/user/1")
         self.assertEqual(response.status_code, 200)
 
-    def test_list_cards(self):
+    def test_list_users(self):
         db = connect(self.db)
         db.executescript(self._preload)
-        response = self.client.get("/api/card")
+        response = self.client.get("/api/user")
         self.assertEqual(response.status_code, 200)
 
 
