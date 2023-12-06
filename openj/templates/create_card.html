@@ -9,7 +9,7 @@
     <label for="user_id">Owner</label>
     <select name="user_id" required>
         {% for user in users %}
-        <option value={{ user.id }}>{{ user.title }}</option>
+        <option value={{ user.id }}>{{ user.firstname }} {{ user.lastname }}</option>
         {% endfor %}
     </select>
     <label for="lane_id">Lane</label>
