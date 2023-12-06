@@ -71,6 +71,21 @@ a, a:visited, a:hover, a:active {
     text-decoration: none;
 }
 
+.material-symbols {
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1em;
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
 .button, .button:visited {
     text-decoration: none;
     font-size: 1.2em;
@@ -153,38 +168,9 @@ input[type="submit"] {
 
 .card-detail {
     color: var(--color-text-header);
-    vertical-align: bottom;
-    font-size: 0.8em;
+    vertical-align: bottom !imporant; 
+    font-size: 0.8em !important;
     white-space: nowrap;
-}
-
-.material-symbols-outlined {
-    font-family: 'Material Symbols Outlined';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1em;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
-}
-
-.material-symbols-filled {
-    font-family: 'Material Symbols Outlined';
-    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 1em;
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
 }
 
 .flash {
