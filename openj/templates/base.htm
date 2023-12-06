@@ -4,8 +4,8 @@
         <title>{% block title %}{% endblock %}</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        {% if args.interval %}
-        <meta http-equiv="refresh" content="{{ args.interval }}">
+        {% if options.interval %}
+        <meta http-equiv="refresh" content="{{ options.interval }}">
         {% endif %}
         <link rel="stylesheet" href="{{ url_for('static', filename='site.css') }}" />
     </head>
