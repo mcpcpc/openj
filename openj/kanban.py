@@ -31,6 +31,7 @@ def index():
             card.created_at AS created_at,
             card.updated_at AS updated_at,
             card.title AS title,
+            card.lane_id AS lane_id,
             user.firstname AS firstname,
             user.lastname AS lastname
         FROM card
