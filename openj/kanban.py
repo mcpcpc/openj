@@ -25,7 +25,18 @@ kanban = Blueprint("kanban", __name__)
 def index():
     interval = request.args.get("interval")
     lanes = get_db().execute("SELECT * FROM lane").fetchall()
-    cards = get_db().execute("SELECT * FROM card").fetchall()
+    cards = get_db().execute(
+        """
+        SELECT
+            card.created_at AS created_at,
+            card.updated_at AS updated_at,
+            card.title AS title,
+            user.firstname AS firstname,
+            user.lastname AS lastname
+        FROM card
+            INNER JOIN user ON user.id = card.user_id
+        """
+    ).fetchall()
     groups = {l["title"]: [c for c in cards if c["lane_id"] == l["id"]] for l in lanes}
     return render_template("kanban.html", interval=interval, groups=groups)
 
