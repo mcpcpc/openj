@@ -67,7 +67,6 @@ h2 {
 }
 
 a, a:visited, a:hover, a:active {
-    color: var(--color-text-highlight);
     text-decoration: none;
 }
 
@@ -171,6 +170,7 @@ input[type="submit"] {
 .card-topline {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: nowrap;
 }
 
