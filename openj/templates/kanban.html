@@ -12,7 +12,7 @@
     <div class="card">
         <div class="card-header">
             <div class="card-topline">
-                C{{ card.id }}
+                <b>C{{ card.id }}</b>
                 <span class="material-symbols">
                     <a href="{{ url_for('kanban.update_card', id=card.id) }}">edit</a>
                     <a href="{{ url_for('kanban.delete_card', id=card.id) }}">delete</a>
