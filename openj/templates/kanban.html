@@ -11,7 +11,10 @@
     {% for card in cards %}
     <div class="card">
         <div class="card-header">
-            <b><a href="{{ url_for('kanban.update_card', id=card.id) }}">ID {{ card.id }}</a></b>
+            <div class="card-topline">
+                <b><a href="{{ url_for('kanban.update_card', id=card.id) }}">ID {{ card.id }}</a></b>
+                <span class="material-symbols">person</span>
+            </div>
             {{ card.title }}
         </div>
         <div class="card-detail">
