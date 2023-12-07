@@ -11,8 +11,8 @@
     {% for card in cards %}
     <div class="card">
         <div class="card-header">
-            <h3>{{ card.title }}</h3>
             <b><a href="{{ url_for('kanban.update_card', id=card.id) }}">ID {{ card.id }}</a></b>
+            {{ card.title }}
         </div>
         <div class="card-detail">
             {% if card.updated_at %}
