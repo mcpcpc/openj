@@ -1,0 +1,11 @@
+{% extends 'base.htm' %}
+{% block title %}Kanban Configuration{% endblock %}
+{% block header %}
+<h1>Configuration</h1>
+<a class="button" href="{{ url_for('kanban.create_user') }}">&#65291; Add User</a>
+{% endblock %}
+{% block main %}
+{% for user in users %}
+<p>{{ user.firstname }} {{ user.lastname }} {{ user. card_count }}</p>
+{% endfor %}
+{% endblock %}
